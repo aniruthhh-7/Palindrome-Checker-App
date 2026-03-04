@@ -1,0 +1,29 @@
+public class UseCase4PalindromeCheckerApp {
+
+    public static void main(String[] args) {
+
+        String word = "madam";
+        char[] chars = word.toCharArray();
+
+        int start = 0;
+        int end = chars.length - 1;
+        boolean palindrome = true;
+
+        while(start < end) {
+
+            if(chars[start] != chars[end]) {
+                palindrome = false;
+                break;
+            }
+
+            start++;
+            end--;
+        }
+
+        if(palindrome)
+            System.out.println(word + " is a Palindrome");
+        else
+            System.out.println(word + " is NOT a Palindrome");
+
+    }
+}
